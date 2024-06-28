@@ -1,9 +1,9 @@
 ## React practice apps
 
 Boilerplate app from [vite-mui-ts](https://github.com/emre-cil/vite-mui-ts) provides TypeScript + React + Redux + MUI + RRD + ESLint + Prettier
+<br>
 React course from [O'Reilly](https://learning.oreilly.com/course/react-the/9781801812603/)
 
-![vite](public\vite.svg)
 
 ### Getting Started
 

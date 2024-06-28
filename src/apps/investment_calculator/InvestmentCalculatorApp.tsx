@@ -14,6 +14,12 @@ const InvestmentCalculatorApp = () => {
 
   const inputIsValid = userInput.duration >= 1;
 
+    /**
+   * Handles changes to the user input fields.
+   * 
+   * @param {keyof UserInputState} inputIdentifier - The identifier of the input field being changed.
+   * @param {string} newValue - The new value of the input field.
+   */
   function handleInputChange(inputIdentifier: keyof UserInputState, newValue: string) {
     setUserInput((prevUserInput) => {
       return {

@@ -3,10 +3,23 @@ import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, 
 import { calculateInvestmentResults, formatter } from '../utils/investment';
 import { UserInputState } from '../components/UserInput';
 
+/**
+ * Interface representing the props for the Results component.
+ * 
+ * @property {UserInputState} input - The user input state for investment calculations.
+ */
 interface ResultsProps {
   input: UserInputState;
 }
 
+/**
+ * Interface representing the data for each year of the investment calculation.
+ * 
+ * @property {number} valueEndOfYear - The investment value at the end of the year.
+ * @property {number} annualInvestment - The amount invested every year.
+ * @property {number} year - The year of the investment period.
+ * @property {number} interest - The interest earned in the year.
+ */
 interface YearData {
   valueEndOfYear: number;
   annualInvestment: number;
@@ -14,6 +27,15 @@ interface YearData {
   interest: number;
 }
 
+/**
+ * Results component for displaying investment calculation results in a table.
+ * 
+ * @param {ResultsProps} props - The props for the Results component.
+ * @returns {JSX.Element} The rendered Results component.
+ * 
+ * @example
+ * <Results input={userInput} />
+ */
 export default function Results({ input }: ResultsProps) {
   const resultsData = calculateInvestmentResults(input);
   const initialInvestment = resultsData[0].valueEndOfYear - resultsData[0].interest - resultsData[0].annualInvestment;

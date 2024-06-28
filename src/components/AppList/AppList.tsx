@@ -34,6 +34,15 @@ const AppList = () => {
     },
   ];
 
+    /**
+   * Generates a themed card for each application in the list.
+   * 
+   * @param {string} title - The title of the application.
+   * @param {string} description - The description of the application.
+   * @param {JSX.Element} thumbnail - The thumbnail image of the application.
+   * @param {string} route - The route to navigate to the application.
+   * @returns {JSX.Element} The themed card for the application.
+   */
   const themeTypes = (title: string, description: string, thumbnail: JSX.Element, route: string) => (
     <Link to={route} style={{ textDecoration: 'none', color: 'inherit' }} key={title}>
       <Stack

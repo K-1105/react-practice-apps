@@ -1,6 +1,14 @@
 import React from 'react';
 import { Box, Typography, TextField, Grid } from '@mui/material';
 
+/**
+ * Interface representing the state of user input fields for investment calculations.
+ * 
+ * @property {number} initialInvestment - The initial investment amount.
+ * @property {number} annualInvestment - The amount invested every year.
+ * @property {number} expectedReturn - The expected (annual) rate of return.
+ * @property {number} duration - The investment duration (time frame).
+ */
 export interface UserInputState {
   initialInvestment: number;
   annualInvestment: number;
@@ -8,11 +16,26 @@ export interface UserInputState {
   duration: number;
 }
 
+/**
+ * Interface for the props of the UserInput component.
+ * 
+ * @property {(field: keyof UserInputState, value: string) => void} handleInputChange - Function to handle changes in the input fields.
+ * @property {UserInputState} userInput - The current state of the user input fields.
+ */
 interface UserInputProps {
   handleInputChange: (field: keyof UserInputState, value: string) => void;
   userInput: UserInputState;
 }
 
+/**
+ * UserInput component for collecting investment input data from the user.
+ * 
+ * @param {UserInputProps} props - The props for the UserInput component.
+ * @returns {JSX.Element} The rendered UserInput component.
+ * 
+ * @example
+ * <UserInput handleInputChange={handleInputChange} userInput={userInput} />
+ */
 export default function UserInput({ handleInputChange, userInput }: UserInputProps) {
   return (
     <Box

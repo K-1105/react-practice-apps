@@ -1,6 +1,14 @@
 import { Box, Typography } from '@mui/material';
 import logo from '../assets/investment-calculator-logo.png';
 
+/**
+ * Header component for displaying the logo and title of the investment calculator application.
+ * 
+ * @returns {JSX.Element} The rendered Header component.
+ * 
+ * @example
+ * <Header />
+ */
 export default function Header() {
   return (
     <Box

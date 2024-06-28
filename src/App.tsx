@@ -5,7 +5,7 @@ import React from 'react';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/react-practice-apps'>
       <CssBaseline />
       <Routing />
     </BrowserRouter>

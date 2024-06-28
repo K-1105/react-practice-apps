@@ -1,7 +1,8 @@
 {
-  "name": "vite-mui-ts",
+  "name": "react-practice-apps",
   "version": "1.0.0",
-  "description": "TypeScript + React + Redux + MUI + RRD + ESLint + Prettier => Boilerplate",
+  "homepage": "https://k-1105.github.io/react-practice-apps/",
+  "description": "A showcase of little React projects and course outcomes",
   "license": "MIT",
   "author": "emrecil <info.emrecil@gmail.com>",
   "keywords": [
@@ -17,12 +18,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/emre-cil/vite-mui-ts.git"
+    "url": "https://github.com/K-1105/react-practice-apps.git"
   },
   "bugs": {
-    "url": "https://github.com/emre-cil/vite-mui-ts/issues"
+    "url": "https://github.com/K-1105/react-practice-apps/issues"
   },
-  "homepage": "https://github.com/emre-cil/vite-mui-ts#readme",
   "scripts": {
     "dev": "vite --open",
     "start": "vite --open",
@@ -37,7 +37,9 @@
     "test:cover": "vitest run --coverage",
     "test:e2e": "pnpm preview:test 'cypress open'",
     "test:e2e:headless": "pnpm preview:test 'cypress run'",
-    "test:e2e:ci": "vite build && pnpm preview:test 'cypress run --record'"
+    "test:e2e:ci": "vite build && pnpm preview:test 'cypress run --record'",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -47,6 +49,7 @@
     "@mui/x-data-grid": "^7.7.1",
     "@mui/x-data-grid-pro": "^7.7.1",
     "@reduxjs/toolkit": "^2.2.3",
+    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",

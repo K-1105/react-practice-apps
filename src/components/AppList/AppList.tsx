@@ -21,7 +21,7 @@ const AppList = () => {
       route: '/investmentcalculator',
     },
     {
-      title: 'two',
+      title: 'Placeholder',
       description: 'little doggie',
       thumbnail: (
         <img

@@ -37,9 +37,7 @@
     "test:cover": "vitest run --coverage",
     "test:e2e": "pnpm preview:test 'cypress open'",
     "test:e2e:headless": "pnpm preview:test 'cypress run'",
-    "test:e2e:ci": "vite build && pnpm preview:test 'cypress run --record'",
-    "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d dist"
+    "test:e2e:ci": "vite build && pnpm preview:test 'cypress run --record'"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",

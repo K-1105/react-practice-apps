@@ -9,12 +9,12 @@ const AppList = () => {
 
   const appList = [
     {
-      title: 'one',
-      description: 'little doggie',
+      title: 'Investment Calculator App',
+      description: 'A yearly investment capital calculator. Code has been refactored to use MUI components',
       thumbnail: (
         <img
-          src="src/assets/nadie-dogs (59).jpg"
-          alt="Romi, the cutest pup from narices de nadie"
+          src="src\assets\investment_app.png"
+          alt="A screenshot showing a preview of the investment app"
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
       ),

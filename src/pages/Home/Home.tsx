@@ -20,7 +20,7 @@ const Home = () => {
         />
       </IconButton>
       <Stack gap={1} my={2}>
-        <Typography textAlign="center" variant="h1">
+        <Typography textAlign="center" variant="h1" sx={{margin: '2rem'}}>
           Welcome to my React app practise page
         </Typography>
       </Stack>

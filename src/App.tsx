@@ -3,8 +3,10 @@ import { CssBaseline } from '@mui/material';
 import Routing from './routes/Routing';
 
 const App = () => {
+  const basename = process.env.NODE_ENV === 'production' ? '/' : '/';
+
   return (
-    <BrowserRouter basename='/react-practice-apps'>
+    <BrowserRouter basename={basename}>
       <CssBaseline />
       <Routing />
     </BrowserRouter>

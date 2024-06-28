@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typography, Stack, Container, IconButton } from '@mui/material';
 import { changeMode } from '@/features/user/userSlice';
 import Brightness4Icon from '@mui/icons-material/Brightness4';

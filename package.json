@@ -4,7 +4,7 @@
   "homepage": "https://k-1105.github.io/react-practice-apps/",
   "description": "A showcase of little React projects and course outcomes",
   "license": "MIT",
-  "author": "emrecil <info.emrecil@gmail.com>",
+  "author": "K-1105",
   "keywords": [
     "react",
     "boilerplate",
@@ -39,7 +39,7 @@
     "test:e2e:headless": "pnpm preview:test 'cypress run'",
     "test:e2e:ci": "vite build && pnpm preview:test 'cypress run --record'",
     "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d . -t true"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",

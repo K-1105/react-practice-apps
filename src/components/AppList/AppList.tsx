@@ -1,8 +1,6 @@
-import React from 'react';
 import { Stack, Typography, Theme } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useAppSelector } from '@/app/store';
-import Counter from '../Counter/Counter';
 
 const AppList = () => {
   const mode = useAppSelector((state) => state.user.mode);

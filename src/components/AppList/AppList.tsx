@@ -19,6 +19,18 @@ const AppList = () => {
       route: '/investmentcalculator',
     },
     {
+      title: 'Timer Challenge Game',
+      description: 'Test your sense of time by guessing as close to the target time as possible without exceeding it!',
+      thumbnail: (
+        <img
+          src="src\assets\timer_app.png"
+          alt="A screenshot showing a preview of the timer app"
+          style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
+        />
+      ),
+      route: '/timergame',
+    },
+    {
       title: 'Placeholder',
       description: 'little doggie',
       thumbnail: (

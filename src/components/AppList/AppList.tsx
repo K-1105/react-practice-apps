@@ -1,6 +1,10 @@
 import { Stack, Typography, Theme } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useAppSelector } from '@/app/store';
+import investmentAppImg from '../../assets/investment_app.png'
+import timerAppImg from '../../assets/timer_app.png'
+import projectsAppImg from '../../assets/project_list_app.png'
+import pupImage from '../../assets/nadie-dogs (59).jpg'
 
 const AppList = () => {
   const mode = useAppSelector((state) => state.user.mode);
@@ -11,7 +15,7 @@ const AppList = () => {
       description: 'A yearly investment capital calculator. Code has been refactored to use MUI components',
       thumbnail: (
         <img
-          src="src\assets\investment_app.png"
+          src= {investmentAppImg}
           alt="A screenshot showing a preview of the investment app"
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
@@ -23,7 +27,7 @@ const AppList = () => {
       description: 'Test your sense of time by guessing as close to the target time as possible without exceeding it!',
       thumbnail: (
         <img
-          src="src\assets\timer_app.png"
+          src= {timerAppImg}
           alt="A screenshot showing a preview of the timer app"
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
@@ -35,7 +39,7 @@ const AppList = () => {
       description: 'List and organise your projects and tasks',
       thumbnail: (
         <img
-          src="src\assets\project_list_app.png"
+          src={projectsAppImg}
           alt="A screenshot showing a preview of the timer app"
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
@@ -47,7 +51,7 @@ const AppList = () => {
       description: 'little doggie',
       thumbnail: (
         <img
-          src="src/assets/nadie-dogs (59).jpg"
+          src={pupImage}
           alt="Romi, the cutest pup from narices de nadie"
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />

@@ -31,6 +31,18 @@ const AppList = () => {
       route: '/timergame',
     },
     {
+      title: 'Project List Tool',
+      description: 'List and organise your projects and tasks',
+      thumbnail: (
+        <img
+          src="src\assets\project_list_app.png"
+          alt="A screenshot showing a preview of the timer app"
+          style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
+        />
+      ),
+      route: '/projectlist',
+    },
+    {
       title: 'Placeholder',
       description: 'little doggie',
       thumbnail: (

@@ -4,6 +4,7 @@ import Login from '@/pages/Auth/Login';
 import Home from '@/pages/Home/Home';
 import InvestmentCalculatorApp from '@/apps/investment_calculator/InvestmentCalculatorApp';
 import TimerGameApp from '@/apps/timer_game/TimerGameApp';
+import ProjectsListApp from '@/apps/projects_list/ProjectsListApp';
 
 const Routing = () => {
   return (
@@ -13,6 +14,7 @@ const Routing = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/investmentcalculator" element={<InvestmentCalculatorApp />} />
       <Route path="/timergame" element={<TimerGameApp />} />
+      <Route path="/projectlist" element={<ProjectsListApp />} />
     </Routes>
   );
 };

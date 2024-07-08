@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import Button from '@mui/material/Button';
+import { useState, ChangeEvent } from 'react';
 
-export default function NewTask({ onAdd }) {
-  const [enteredTask, setEnteredTask] = useState('');
+interface NewTaskProps {
+  onAdd: (task: string) => void;
+}
 
-  function handleChange(event) {
+const NewTask: React.FC<NewTaskProps> = ({ onAdd }) => {
+  const [enteredTask, setEnteredTask] = useState<string>('');
+
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
     setEnteredTask(event.target.value);
   }
 
@@ -23,12 +28,11 @@ export default function NewTask({ onAdd }) {
         onChange={handleChange}
         value={enteredTask}
       />
-      <button
-        className="text-stone-700 hover:text-stone-950"
-        onClick={handleClick}
-      >
+      <Button className="text-stone-700 hover:text-stone-950" onClick={handleClick}>
         Add Task
-      </button>
+      </Button>
     </div>
   );
-}
+};
+
+export default NewTask;

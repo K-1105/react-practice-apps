@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 import React from 'react';
 
 interface Task {
@@ -25,9 +26,9 @@ interface SelectedProjectProps {
 const SelectedProject: React.FC<SelectedProjectProps> = ({
   project,
   onDelete,
-  onAddTask,
-  onDeleteTask,
-  tasks,
+  // onAddTask,
+  // onDeleteTask,
+  // tasks,
 }) => {
   // Your component implementation here...
   return (
@@ -35,7 +36,7 @@ const SelectedProject: React.FC<SelectedProjectProps> = ({
       <h2>{project.title}</h2>
       <p>{project.description}</p>
       <p>{project.dueDate}</p>
-      <button onClick={onDelete}>Delete Project</button>
+      <Button onClick={onDelete}>Delete Project</Button>
       {/* Add more UI elements and logic as needed */}
     </div>
   );

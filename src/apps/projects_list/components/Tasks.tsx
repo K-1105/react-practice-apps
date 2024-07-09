@@ -1,8 +1,9 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import NewTask from './NewTask';
+import Checkbox from '@mui/material/Checkbox';
 
-interface Task {
+export interface TaskProps {
   id: string;
   text: string;
   completed: boolean;
@@ -10,28 +11,30 @@ interface Task {
 }
 
 interface TasksProps {
-  tasks: Task[];
-  onAdd: (task: string) => void;
+  tasks: TaskProps[];
+  onAdd: (task: Omit<TaskProps, 'id'>) => void;
   onDelete: (id: string) => void;
+  onToggleComplete: (id: string) => void;
 }
 
-const Tasks: React.FC<TasksProps> = ({ tasks, onAdd, onDelete }) => {
+const Tasks: React.FC<TasksProps> = ({ tasks, onAdd, onDelete, onToggleComplete }) => {
   return (
     <section>
       <h2 className="text-2xl font-bold text-stone-700 mb-4">Tasks</h2>
       <NewTask onAdd={onAdd} />
-      {tasks.length === 0 && (
-        <p className="text-stone-800 my-4">
-          This project does not have any tasks yet.
-        </p>
-      )}
+      {tasks.length === 0 && <p className="text-stone-800 my-4">This project does not have any tasks yet.</p>}
       {tasks.length > 0 && (
         <ul className="p-4 mt-8 rounded-md bg-stone-100">
           {tasks.map((task) => (
-            <li key={task.id} className="flex justify-between my-4">
-              <span>{task.text}</span>
+            <li key={task.id} className="flex items-center my-4">
+              <Checkbox
+                className="mr-2 flex-shrink-0"
+                checked={task.completed}
+                onChange={() => onToggleComplete(task.id)}
+              ></Checkbox>
+              <span className={`flex-grow text-left ${task.completed ? 'line-through' : ''}`}>{task.text}</span>
               <Button
-                className="text-stone-700 hover:text-red-500"
+                className="ml-2 text-stone-700 hover:text-red-500 flex-shrink-0"
                 onClick={() => onDelete(task.id)}
               >
                 Clear

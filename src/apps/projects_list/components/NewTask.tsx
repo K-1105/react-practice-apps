@@ -1,8 +1,9 @@
 import Button from '@mui/material/Button';
 import { useState, ChangeEvent } from 'react';
+import { TaskProps } from './Tasks';
 
 interface NewTaskProps {
-  onAdd: (task: string) => void;
+  onAdd: (task: TaskProps) => void;
 }
 
 const NewTask: React.FC<NewTaskProps> = ({ onAdd }) => {
@@ -16,7 +17,15 @@ const NewTask: React.FC<NewTaskProps> = ({ onAdd }) => {
     if (enteredTask.trim() === '') {
       return;
     }
-    onAdd(enteredTask);
+    // Create a new TaskProps object
+    const newTask: TaskProps = {
+      id: Math.random().toString(), // Generating a random ID for the task
+      text: enteredTask,
+      completed: false,
+      projectId: null, // Adjust this as necessary if you have projectId
+    };
+
+    onAdd(newTask);
     setEnteredTask('');
   }
 
@@ -28,7 +37,7 @@ const NewTask: React.FC<NewTaskProps> = ({ onAdd }) => {
         onChange={handleChange}
         value={enteredTask}
       />
-      <Button className="text-stone-700 hover:text-stone-950" onClick={handleClick}>
+      <Button onClick={handleClick}>
         Add Task
       </Button>
     </div>

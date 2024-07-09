@@ -3,13 +3,8 @@ import NewProject from './components/NewProject';
 import NoProjectSelected from './components/NoProjectSelected';
 import ProjectsSidebar from './components/ProjectSidebar';
 import SelectedProject from './components/SelectedProject';
+import { TaskProps } from './components/Tasks';
 
-interface Task {
-  id: string;
-  title: string;
-  completed: boolean;
-  projectId?: number | null;
-}
 
 export interface Project {
   id: number;
@@ -21,7 +16,7 @@ export interface Project {
 interface ProjectsState {
   selectedProjectId: number | null | undefined;
   projects: Project[];
-  tasks: Task[];
+  tasks: TaskProps[];
 }
 
 const ProjectsListApp: React.FC = () => {
@@ -31,10 +26,10 @@ const ProjectsListApp: React.FC = () => {
     tasks: [],
   });
 
-  const handleAddTask = (task: Omit<Task, 'id'>) => {
+  const handleAddTask = (task: Omit<TaskProps, 'id'>) => {
     setProjectsState((prevState) => {
       const taskId = Math.random().toString();
-      const newTask: Task = {
+      const newTask: TaskProps = {
         ...task,
         id: taskId,
         projectId: prevState.selectedProjectId,
@@ -45,6 +40,15 @@ const ProjectsListApp: React.FC = () => {
         tasks: [newTask, ...prevState.tasks],
       };
     });
+  };
+
+  const handleToggleComplete = (id: string) => {
+    setProjectsState((prevState) => ({
+      ...prevState,
+      tasks: prevState.tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      ),
+    }));
   };
 
   const handleDeleteTask = (id: string) => {
@@ -121,6 +125,7 @@ const ProjectsListApp: React.FC = () => {
       onDelete={handleDeleteProject}
       onAddTask={handleAddTask}
       onDeleteTask={handleDeleteTask}
+      onToggleCompleteTask={handleToggleComplete}
       tasks={projectsState.tasks.filter(
         (task) => task.projectId === selectedProject.id
       )}

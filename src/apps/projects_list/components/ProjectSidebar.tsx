@@ -25,7 +25,7 @@ const ProjectsSidebar: React.FC<ProjectsSidebarProps> = ({
       <div>
         <Button onClick={onStartAddProject}>+ Add Project</Button>
       </div>
-      <ul className="mt-8">
+      <ul className="mt-8 list-none pl-0">
         {projects.map((project) => {
           let cssClasses = 'w-full text-left px-2 py-1 rounded-sm my-1 hover:text-stone-200 hover:bg-stone-800';
 
@@ -37,7 +37,7 @@ const ProjectsSidebar: React.FC<ProjectsSidebarProps> = ({
 
           return (
             <li key={project.id}>
-              <Button className={cssClasses} onClick={() => onSelectProject(project.id)}>
+              <Button className={cssClasses} style={{justifyContent: "flex-start"}} onClick={() => onSelectProject(project.id)}>
                 {project.title}
               </Button>
             </li>

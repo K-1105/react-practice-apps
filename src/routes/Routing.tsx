@@ -5,6 +5,7 @@ import Home from '@/pages/Home/Home';
 import InvestmentCalculatorApp from '@/apps/investment_calculator/InvestmentCalculatorApp';
 import TimerGameApp from '@/apps/timer_game/TimerGameApp';
 import ProjectsListApp from '@/apps/projects_list/ProjectsListApp';
+import ShoppingCartApp from '@/apps/shopping_cart/ShoppingCartApp';
 
 const Routing = () => {
   return (
@@ -15,6 +16,7 @@ const Routing = () => {
       <Route path="/investmentcalculator" element={<InvestmentCalculatorApp />} />
       <Route path="/timergame" element={<TimerGameApp />} />
       <Route path="/projectlist" element={<ProjectsListApp />} />
+      <Route path="/shoppingcart" element={<ShoppingCartApp />} />
     </Routes>
   );
 };

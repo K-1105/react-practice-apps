@@ -47,6 +47,18 @@ const AppList = () => {
       route: '/projectlist',
     },
     {
+      title: 'Shoppping Cart App',
+      description: 'Add items to a shopping cart using a context wrapper',
+      thumbnail: (
+        <img
+          src={projectsAppImg}
+          alt="A screenshot showing a preview of the timer app"
+          style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
+        />
+      ),
+      route: '/shoppingcart',
+    },
+    {
       title: 'Placeholder',
       description: 'little doggie',
       thumbnail: (

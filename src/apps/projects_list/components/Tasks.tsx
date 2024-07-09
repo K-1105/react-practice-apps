@@ -25,22 +25,25 @@ const Tasks: React.FC<TasksProps> = ({ tasks, onAdd, onDelete, onToggleComplete 
       {tasks.length === 0 && <p className="text-stone-800 my-4">This project does not have any tasks yet.</p>}
       {tasks.length > 0 && (
         <ul className="p-4 mt-8 rounded-md bg-stone-100">
-          {tasks.map((task) => (
-            <li key={task.id} className="flex items-center my-4">
-              <Checkbox
-                className="mr-2 flex-shrink-0"
-                checked={task.completed}
-                onChange={() => onToggleComplete(task.id)}
-              ></Checkbox>
-              <span className={`flex-grow text-left ${task.completed ? 'line-through' : ''}`}>{task.text}</span>
-              <Button
-                className="ml-2 text-stone-700 hover:text-red-500 flex-shrink-0"
-                onClick={() => onDelete(task.id)}
-              >
-                Clear
-              </Button>
-            </li>
-          ))}
+          {tasks
+            .slice()
+            .reverse()
+            .map((task) => (
+              <li key={task.id} className="flex items-center my-4">
+                <Checkbox
+                  className="mr-2 flex-shrink-0"
+                  checked={task.completed}
+                  onChange={() => onToggleComplete(task.id)}
+                ></Checkbox>
+                <span className={`flex-grow text-left ${task.completed ? 'line-through' : ''}`}>{task.text}</span>
+                <Button
+                  className="ml-2 text-stone-700 hover:text-red-500 flex-shrink-0"
+                  onClick={() => onDelete(task.id)}
+                >
+                  Clear
+                </Button>
+              </li>
+            ))}
         </ul>
       )}
     </section>

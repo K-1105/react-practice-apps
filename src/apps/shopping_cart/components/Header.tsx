@@ -34,7 +34,7 @@ export default function Header() {
       <header id="main-header">
         <div id="main-title">
           <img className='rounded-md' src={logo} alt="the logo, it is a dog and a stethoscope" />
-          <h1>Sponsor Page</h1>
+          <h1 className='shopping-cart-header'>Sponsor Page</h1>
         </div>
         <p>
           <button onClick={handleOpenCartClick}>Cart ({cartQuantity})</button>

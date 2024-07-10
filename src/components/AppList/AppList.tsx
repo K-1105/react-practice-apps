@@ -5,6 +5,7 @@ import investmentAppImg from '../../assets/investment_app.png'
 import timerAppImg from '../../assets/timer_app.png'
 import projectsAppImg from '../../assets/project_list_app.png'
 import pupImage from '../../assets/nadie-dogs (59).jpg'
+import shoppingCartAppImg from '../../assets/shopping_cart_app.png'
 
 const AppList = () => {
   const mode = useAppSelector((state) => state.user.mode);
@@ -51,7 +52,7 @@ const AppList = () => {
       description: 'Add items to a shopping cart using a context wrapper',
       thumbnail: (
         <img
-          src={projectsAppImg}
+          src={shoppingCartAppImg}
           alt="A screenshot showing a preview of the timer app"
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />

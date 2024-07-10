@@ -135,7 +135,7 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
           paper: mode === 'dark' ? '#131313' : '#383838',
         },
         text: {
-          primary: mode === 'dark' ? '#FFFFFF' : '#000000',
+          primary: mode === 'dark' ? '#c8c8c8' : '#000000',
           secondary: '#999999',
           disabled: '#C3C1BD',
         },
@@ -163,7 +163,7 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
         fontFamily: 'Dosis, sans-serif',
 
         h1: {
-          fontSize: '26px',
+          fontSize: '40px',
           fontWeight: '600',
           // lineHeight: '33px',
         },

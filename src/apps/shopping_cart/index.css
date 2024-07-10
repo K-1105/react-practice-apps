@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   margin: 0;
   font-family: 'Merriweather', serif;
   -webkit-font-smoothing: antialiased;
@@ -12,7 +12,7 @@ body {
   background: linear-gradient(#000, #007070);
   color: #fff;
   min-height: 100vh;
-}
+} */
 
 #main-header {
   display: flex;
@@ -31,7 +31,7 @@ body {
   margin-right: 1.5rem;
 }
 
-h1 {
+.shopping-cart-header {
   text-align: center;
   text-transform: uppercase;
   color: #0489bd;
@@ -59,9 +59,9 @@ h1 {
   margin: 2rem auto;
 }
 
-#shop h2 {
+.shopping-cart-subheader {
   font-size: 1.5rem;
-  color: #b8e9fc;
+  color: #42a2d6;
   text-transform: uppercase;
 }
 
@@ -98,7 +98,7 @@ h1 {
 
 .product-content h3 {
   font-size: 1.25rem;
-  color: #b8e9fc;
+  color: #42a2d6;
   margin-bottom: 0.15rem;
 }
 

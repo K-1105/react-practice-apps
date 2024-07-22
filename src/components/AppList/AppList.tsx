@@ -60,6 +60,18 @@ const AppList = () => {
       route: '/shoppingcart',
     },
     {
+      title: 'Places Picker',
+      description: 'Use the user\'s longitude and latitude to sort a list of places',
+      thumbnail: (
+        <img
+          src={shoppingCartAppImg}
+          alt="A screenshot showing a preview of the app"
+          style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
+        />
+      ),
+      route: '/placepicker',
+    },
+    {
       title: 'Placeholder',
       description: 'little doggie',
       thumbnail: (

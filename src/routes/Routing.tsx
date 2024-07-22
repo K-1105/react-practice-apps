@@ -7,18 +7,20 @@ import TimerGameApp from '@/apps/timer_game/TimerGameApp';
 import ProjectsListApp from '@/apps/projects_list/ProjectsListApp';
 import ShoppingCartApp from '@/apps/shopping_cart/ShoppingCartApp';
 import PlacePickerApp from '@/apps/place_picker/PlacePickerApp';
+import QuizApp from '@/apps/quiz/QuizApp';
 
 const Routing = () => {
   return (
     <Routes>
-      <Route path="*" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/investmentcalculator" element={<InvestmentCalculatorApp />} />
-      <Route path="/timergame" element={<TimerGameApp />} />
-      <Route path="/projectlist" element={<ProjectsListApp />} />
-      <Route path="/shoppingcart" element={<ShoppingCartApp />} />
-      <Route path="/placepicker" element={<PlacePickerApp />} />
+      <Route path='*' element={<Home />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+      <Route path='/investmentcalculator' element={<InvestmentCalculatorApp />} />
+      <Route path='/timergame' element={<TimerGameApp />} />
+      <Route path='/projectlist' element={<ProjectsListApp />} />
+      <Route path='/shoppingcart' element={<ShoppingCartApp />} />
+      <Route path='/placepicker' element={<PlacePickerApp />} />
+      <Route path='/quiz' element={<QuizApp />} />
     </Routes>
   );
 };

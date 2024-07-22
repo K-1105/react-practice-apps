@@ -6,6 +6,9 @@ import timerAppImg from '../../assets/timer_app.png'
 import projectsAppImg from '../../assets/project_list_app.png'
 import pupImage from '../../assets/nadie-dogs (59).jpg'
 import shoppingCartAppImg from '../../assets/shopping_cart_app.png'
+import placePickerAppImg from '../../assets/place_picker_app.png'
+import quizAppImg from '../../assets/quiz_app.png'
+
 
 const AppList = () => {
   const mode = useAppSelector((state) => state.user.mode);
@@ -61,15 +64,27 @@ const AppList = () => {
     },
     {
       title: 'Places Picker',
-      description: 'Use the user\'s longitude and latitude to sort a list of places',
+      description: 'Use the user\'s longitude and latitude to sort a list of places then add them to a list',
       thumbnail: (
         <img
-          src={shoppingCartAppImg}
+          src={placePickerAppImg}
           alt="A screenshot showing a preview of the app"
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
       ),
       route: '/placepicker',
+    },
+    {
+      title: 'Quiz',
+      description: 'Test your knowledge!',
+      thumbnail: (
+        <img
+          src={quizAppImg}
+          alt="A screenshot showing a preview of the app"
+          style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
+        />
+      ),
+      route: '/quiz',
     },
     {
       title: 'Placeholder',

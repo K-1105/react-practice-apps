@@ -4,7 +4,7 @@ import * as path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/react-practice-apps',
   build: {},
   resolve: {
     alias: {

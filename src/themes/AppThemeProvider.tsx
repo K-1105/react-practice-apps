@@ -130,9 +130,9 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
           Lightest: '#E5FFE5',
         },
         background: {
-        default: mode === 'dark' ? '#000000' : '#F2F2F2',
-          opposite: mode === 'dark' ? '#F2F2F2' : '#000000',
-          paper: mode === 'dark' ? '#131313' : '#383838',
+        default: mode === 'dark' ? '#000000' : '#FFFFFF',
+          opposite: mode === 'dark' ? '#FFFFFF' : '#000000',
+          paper: mode === 'dark' ? '#222222' : '#F6F6F6',
         },
         text: {
           primary: mode === 'dark' ? '#c8c8c8' : '#000000',

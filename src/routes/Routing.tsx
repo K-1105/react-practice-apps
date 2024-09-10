@@ -8,19 +8,21 @@ import ProjectsListApp from '@/apps/projects_list/ProjectsListApp';
 import ShoppingCartApp from '@/apps/shopping_cart/ShoppingCartApp';
 import PlacePickerApp from '@/apps/place_picker/PlacePickerApp';
 import QuizApp from '@/apps/quiz/QuizApp';
+import ErrorBoundariesApp from '@/apps/error_boundaries/ErrorBoundariesApp';
 
 const Routing = () => {
   return (
     <Routes>
       <Route path='*' element={<Home />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Register />} />
-      <Route path='/investmentcalculator' element={<InvestmentCalculatorApp />} />
-      <Route path='/timergame' element={<TimerGameApp />} />
-      <Route path='/projectlist' element={<ProjectsListApp />} />
-      <Route path='/shoppingcart' element={<ShoppingCartApp />} />
-      <Route path='/placepicker' element={<PlacePickerApp />} />
-      <Route path='/quiz' element={<QuizApp />} />
+      <Route path='/react-practice-apps/login' element={<Login />} />
+      <Route path='/react-practice-apps/register' element={<Register />} />
+      <Route path='/react-practice-apps/investmentcalculator' element={<InvestmentCalculatorApp />} />
+      <Route path='/react-practice-apps/timergame' element={<TimerGameApp />} />
+      <Route path='/react-practice-apps/projectlist' element={<ProjectsListApp />} />
+      <Route path='/react-practice-apps/shoppingcart' element={<ShoppingCartApp />} />
+      <Route path='/react-practice-apps/placepicker' element={<PlacePickerApp />} />
+      <Route path='/react-practice-apps/quiz' element={<QuizApp />} />
+      <Route path='/react-practice-apps/usersearch' element={<ErrorBoundariesApp />} />
     </Routes>
   );
 };

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
-.quizApp {
+.quiz-app {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
@@ -12,7 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  height: 100dvh;
+  height: 100%;
 
   margin: 0;
   padding: 2rem;
@@ -24,13 +24,13 @@
   text-align: center;
 }
 
-.quizApp header img {
+.quiz-app header img {
   width: 3rem;
   height: 3rem;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
 }
 
-.quizApp header h1 {
+.quiz-app header h1 {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bold;
   font-size: 2.5rem;
@@ -42,7 +42,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.quizApp #last-try {
+.quiz-app #last-try {
   max-width: 40rem;
   margin: 2rem auto;
   font-size: 0.8rem;
@@ -50,14 +50,14 @@
   text-align: center;
 }
 
-.quizApp #last-try h2 {
+.quiz-app #last-try h2 {
   margin: 0;
   font-size: 1rem;
   color: #9c7fd3;
   text-transform: uppercase;
 }
 
-.quizApp #last-try ul {
+.quiz-app #last-try ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -67,7 +67,7 @@
   color: #a690c5;
 }
 
-.quizApp #quiz {
+.quiz-app #quiz {
   max-width: 50rem;
   margin: auto;
   padding: 2rem;
@@ -77,7 +77,7 @@
   text-align: center;
 }
 
-.quizApp #question-overview {
+.quiz-app #question-overview {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 0.8rem;
   color: #9082a3;
@@ -85,7 +85,7 @@
   text-transform: uppercase;
 }
 
-.quizApp #question progress {
+.quiz-app #question progress {
   width: 50%;
   height: 0.5rem;
   border-radius: 24px;
@@ -93,29 +93,29 @@
   margin: 0;
 }
 
-.quizApp #question progress::-webkit-progress-bar {
+.quiz-app #question progress::-webkit-progress-bar {
   background: #6a558a;
   border-radius: 24px;
 }
 
-.quizApp #question progress::-webkit-progress-value {
+.quiz-app #question progress::-webkit-progress-value {
   background: #9e5ef8;
   border-radius: 24px;
 }
 
-.quizApp #question progress.answered {
+.quiz-app #question progress.answered {
   background: #f8e59c;
 }
 
-.quizApp #question progress.answered::-webkit-progress-value {
+.quiz-app #question progress.answered::-webkit-progress-value {
   background: #f8e59c;
 }
 
-.quizApp #question progress.answered::-webkit-progress-bar {
+.quiz-app #question progress.answered::-webkit-progress-bar {
   background: #6a558a;
 }
 
-.quizApp #question h2 {
+.quiz-app #question h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
   font-weight: normal;
@@ -123,7 +123,7 @@
   color: #c1b2dd;
 }
 
-.quizApp #answers {
+.quiz-app #answers {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -133,12 +133,12 @@
   gap: 0.5rem;
 }
 
-.quizApp .answer {
+.quiz-app .answer {
   width: 90%;
   margin: 0 auto;
 }
 
-.quizApp .answer button {
+.quiz-app .answer button {
   display: inline-block;
   width: 100%;
   font-family: 'Roboto Condensed', sans-serif;
@@ -151,33 +151,33 @@
   transition: all 0.2s ease-in-out;
 }
 
-.quizApp .answer button:hover,
-.quizApp .answer button:focus {
+.quiz-app .answer button:hover,
+.quiz-app .answer button:focus {
   background: linear-gradient(180deg, #bf48f6 0%, #9b50f2 100%);
   color: white;
   box-shadow: 0 0 4px 2px rgba(255, 200, 60, 0.8);
 }
 
-.quizApp .answer button.selected {
+.quiz-app .answer button.selected {
   background: linear-gradient(180deg, #fbda81 0%, #f8b173 100%);
   color: #2c203d;
 }
 
-.quizApp .answer button.correct {
+.quiz-app .answer button.correct {
   background: linear-gradient(180deg, #a1fa61 0%, #52d482 100%);
   color: #2c203d;
 }
 
-.quizApp .answer button.wrong {
+.quiz-app .answer button.wrong {
   background: linear-gradient(180deg, #f96fb1 0%, #f52b8c 100%);
   color: #2c203d;
 }
 
-.quizApp #skip-action {
+.quiz-app #skip-action {
   margin-top: 2rem;
 }
 
-.quizApp #skip-action button {
+.quiz-app #skip-action button {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1rem;
   border: none;
@@ -186,12 +186,12 @@
   cursor: pointer;
 }
 
-.quizApp #skip-action button:hover,
-.quizApp #skip-action button:focus {
+.quiz-app #skip-action button:hover,
+.quiz-app #skip-action button:focus {
   color: #c7bfd6;
 }
 
-.quizApp #summary {
+.quiz-app #summary {
   max-width: 40rem;
   margin: 2rem auto;
   padding: 2rem;
@@ -202,7 +202,7 @@
   animation: slide-in-from-bottom 0.7s ease-out;
 }
 
-.quizApp #summary img {
+.quiz-app #summary img {
   display: block;
   width: 8rem;
   height: 8rem;
@@ -215,7 +215,7 @@
   background: #c18cfa;
 }
 
-.quizApp #summary h2 {
+.quiz-app #summary h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 3rem;
   text-align: center;
@@ -224,18 +224,18 @@
   color: #3a2353;
 }
 
-.quizApp #summary ol {
+.quiz-app #summary ol {
   list-style: none;
   margin: 2rem auto;
   padding: 0;
   text-align: center;
 }
 
-.quizApp #summary li {
+.quiz-app #summary li {
   margin: 2rem 0;
 }
 
-.quizApp #summary h3 {
+.quiz-app #summary h3 {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1rem;
   margin: 0 auto;
@@ -249,33 +249,33 @@
   border-radius: 50%;
 }
 
-.quizApp #summary .question {
+.quiz-app #summary .question {
   margin: 0.25rem 0;
   font-size: 1rem;
   color: #30273a;
 }
 
-.quizApp #summary .user-answer {
+.quiz-app #summary .user-answer {
   margin: 0.25rem 0;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bold;
   color: #251e2f;
 }
 
-.quizApp #summary .user-answer.correct {
+.quiz-app #summary .user-answer.correct {
   color: #054e37;
 }
 
-.quizApp #summary .user-answer.wrong {
+.quiz-app #summary .user-answer.wrong {
   color: #730b4b;
 }
 
-.quizApp #summary .user-answer.skipped {
+.quiz-app #summary .user-answer.skipped {
   color: #d1baf2;
   font-weight: normal;
 }
 
-.quizApp #summary-stats {
+.quiz-app #summary-stats {
   display: flex;
   gap: 3rem;
   width: 60%;
@@ -284,20 +284,20 @@
   border-bottom: 2px solid #594276;
 }
 
-.quizApp #summary-stats p {
+.quiz-app #summary-stats p {
   flex: 1;
   display: flex;
   flex-direction: column;
   margin: 0;
 }
 
-.quizApp #summary-stats .number {
+.quiz-app #summary-stats .number {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 3rem;
   color: #594276;
 }
 
-.quizApp #summary-stats .text {
+.quiz-app #summary-stats .text {
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
   font-size: 0.8rem;

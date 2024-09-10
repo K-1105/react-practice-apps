@@ -8,6 +8,8 @@ import pupImage from '../../assets/nadie-dogs (59).jpg'
 import shoppingCartAppImg from '../../assets/shopping_cart_app.png'
 import placePickerAppImg from '../../assets/place_picker_app.png'
 import quizAppImg from '../../assets/quiz_app.png'
+import userSearchAppImg from '../../assets/user_search_app.png'
+
 
 
 const AppList = () => {
@@ -24,7 +26,7 @@ const AppList = () => {
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
       ),
-      route: '/investmentcalculator',
+      route: '/react-practice-apps/investmentcalculator',
     },
     {
       title: 'Timer Challenge Game',
@@ -36,7 +38,7 @@ const AppList = () => {
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
       ),
-      route: '/timergame',
+      route: '/react-practice-apps/timergame',
     },
     {
       title: 'Project List Tool',
@@ -48,7 +50,7 @@ const AppList = () => {
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
       ),
-      route: '/projectlist',
+      route: '/react-practice-apps/projectlist',
     },
     {
       title: 'Shoppping Cart App',
@@ -60,7 +62,7 @@ const AppList = () => {
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
       ),
-      route: '/shoppingcart',
+      route: '/react-practice-apps/shoppingcart',
     },
     {
       title: 'Places Picker',
@@ -72,11 +74,11 @@ const AppList = () => {
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
       ),
-      route: '/placepicker',
+      route: '/react-practice-apps/placepicker',
     },
     {
       title: 'Quiz',
-      description: 'Test your knowledge!',
+      description: 'Test your React knowledge in this timed and shuffled multiple choice quiz',
       thumbnail: (
         <img
           src={quizAppImg}
@@ -84,7 +86,19 @@ const AppList = () => {
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
       ),
-      route: '/quiz',
+      route: '/react-practice-apps/quiz',
+    },
+    {
+      title: 'User search',
+      description: 'Search for a user to induce an error when one doesn\'t exist. This will show an example of an error boundary made with class components',
+      thumbnail: (
+        <img
+          src={userSearchAppImg}
+          alt="A screenshot showing a preview of the app"
+          style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
+        />
+      ),
+      route: '/react-practice-apps/usersearch',
     },
     {
       title: 'Placeholder',
@@ -96,7 +110,7 @@ const AppList = () => {
           style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
         />
       ),
-      route: '/counter',
+      route: '/react-practice-apps',
     },
   ];
 
@@ -117,8 +131,7 @@ const AppList = () => {
           boxShadow: 3,
           borderRadius: 5,
           position: 'relative',
-          background: (theme: Theme) =>
-            mode === 'dark' ? theme.palette.background.paper : theme.palette.background.default,
+          background: (theme: Theme) => theme.palette.background.paper,
           backdropFilter: 'blur(10px)',
         }}
         gap={2}

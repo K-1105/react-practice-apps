@@ -9,6 +9,7 @@ import ShoppingCartApp from '@/apps/shopping_cart/ShoppingCartApp';
 import PlacePickerApp from '@/apps/place_picker/PlacePickerApp';
 import QuizApp from '@/apps/quiz/QuizApp';
 import ErrorBoundariesApp from '@/apps/error_boundaries/ErrorBoundariesApp';
+import HttpRequestApp from '@/apps/http_requests/HttpRequestApp';
 
 const Routing = () => {
   return (
@@ -23,6 +24,7 @@ const Routing = () => {
       <Route path='/react-practice-apps/placepicker' element={<PlacePickerApp />} />
       <Route path='/react-practice-apps/quiz' element={<QuizApp />} />
       <Route path='/react-practice-apps/usersearch' element={<ErrorBoundariesApp />} />
+      <Route path='/react-practice-apps/placepickerhttp' element={<HttpRequestApp />} />
     </Routes>
   );
 };

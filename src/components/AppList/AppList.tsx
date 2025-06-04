@@ -101,6 +101,18 @@ const AppList = () => {
       route: '/react-practice-apps/usersearch',
     },
     {
+      title: 'Places Picker with Backend',
+      description: 'Store data in a backend',
+      thumbnail: (
+        <img
+          src={placePickerAppImg}
+          alt="A screenshot showing a preview of the app"
+          style={{ filter: mode === 'dark' ? 'brightness(0.5)' : 'none' }}
+        />
+      ),
+      route: '/react-practice-apps/placepickerhttp',
+    },
+    {
       title: 'Placeholder',
       description: 'little doggie',
       thumbnail: (
